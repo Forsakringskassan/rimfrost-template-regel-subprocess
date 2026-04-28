@@ -2,6 +2,21 @@
 
 Changelog of rimfrost-template-regel-subprocess.
 
+## 1.0.0 (2026-04-28)
+
+### Breaking changes
+
+-  release 1.0 ([35494](https://github.com/Forsakringskassan/rimfrost-template-regel-subprocess/commit/35494a604c9b2cd) Lars Persson)  
+
+### Features
+
+-  release 1.0 ([35494](https://github.com/Forsakringskassan/rimfrost-template-regel-subprocess/commit/35494a604c9b2cd) Lars Persson)  
+
+### Bug Fixes
+
+-  Bump rimfrost-framework-regel-asyncapi to release version ([a1d37](https://github.com/Forsakringskassan/rimfrost-template-regel-subprocess/commit/a1d3704988aa492) Lars Persson)  
+-  Adjust template in preparation for release ([59580](https://github.com/Forsakringskassan/rimfrost-template-regel-subprocess/commit/595803be006dd8c) Lars Persson)  
+
 ## 0.0.1 (2026-04-17)
 
 ### Features
