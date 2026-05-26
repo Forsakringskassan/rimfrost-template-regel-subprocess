@@ -2,6 +2,12 @@
 
 Changelog of rimfrost-template-regel-subprocess.
 
+## 1.0.2 (2026-05-26)
+
+### Bug Fixes
+
+-  Use RegelProcessResult as result type instead of Utfall ([ad3bf](https://github.com/Forsakringskassan/rimfrost-template-regel-subprocess/commit/ad3bf7d662f5452) Lars Persson)  
+
 ## 1.0.1 (2026-05-16)
 
 ### Bug Fixes
