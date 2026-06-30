@@ -29,10 +29,13 @@ dess punkter även har märkts upp med TODO i relevanta filer.
 
 1. Uppdatera det inkommande kafka-topic som finns i application.properties
 2. Uppdatera det utgående kafka-topic som finns i application.properties
-3. Uppdatera det ID som finns i template_regel.bpmn
-4. Uppdatera de mellanliggande meddelanden som finns template_regel.bpmn att använda samma kafka topics som angavs i application.properties
-5. Byt namn på template_regel.bpmn till lämpligt namn för regeln
-6. Uppdatera artifactId i pom.xml
+3. Byt ut "-template-regel-responses" till utgående kafka topic för variablen TEMPLATE_RESPONSE_TOPIC_NAME
+4. Byt namn på property "TEMPLATE_RESPONSE_TOPIC_NAME" till något unikt för denna subprocess
+5. Uppdatera det ID som finns i template_regel.bpmn
+6. Uppdatera de mellanliggande meddelanden som finns template_regel.bpmn att använda samma kafka topics som angavs i application.properties
+7. Uppdatera "Create Request" data mapping "responseTopicProperty" till det unika namnet för denna subprocess som du valde i punkt 3.
+8. Byt namn på template_regel.bpmn till lämpligt namn för regeln
+9. Uppdatera artifactId i pom.xml
 
 ## Bygg artefakt för lokal testning
 
