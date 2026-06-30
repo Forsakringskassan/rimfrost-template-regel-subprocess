@@ -2,6 +2,22 @@
 
 Changelog of rimfrost-template-regel-subprocess.
 
+## 1.1.1 (2026-06-30)
+
+### Bug Fixes
+
+-  added step en readme ([fd61a](https://github.com/Forsakringskassan/rimfrost-template-regel-subprocess/commit/fd61a746776b83c) Nils Elveros)  
+-  update todo comment ([cf957](https://github.com/Forsakringskassan/rimfrost-template-regel-subprocess/commit/cf9575c32820e40) Nils Elveros)  
+-  update tempalte to have retry and handle error ([1aa15](https://github.com/Forsakringskassan/rimfrost-template-regel-subprocess/commit/1aa156402fa1270) Nils Elveros)  
+-  **deps**  update dependency se.fk.rimfrost.framework.process:rimfrost-framework-process to v1.6.2 ([99dc3](https://github.com/Forsakringskassan/rimfrost-template-regel-subprocess/commit/99dc381cedb937d) renovate[bot])  
+-  add response topic setting ([6b2b6](https://github.com/Forsakringskassan/rimfrost-template-regel-subprocess/commit/6b2b69109227552) Nils Elveros)  
+
+## rimfrost-1.1 (2026-06-04)
+
+### Bug Fixes
+
+-  bump rimfrost-framework-regel-asyncapi to 1.0.5 ([ff7c5](https://github.com/Forsakringskassan/rimfrost-template-regel-subprocess/commit/ff7c57b89db5a13) Ulf Slunga)  
+
 ## 1.0.2 (2026-05-26)
 
 ### Bug Fixes
