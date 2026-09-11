@@ -7,17 +7,44 @@
   <itemDefinition id="_21E76E6F-F6B9-409F-8462-574378B5B473" structureRef="se.fk.rimfrost.framework.regel.RegelResponseMessagePayloadData" />
   <itemDefinition id="_8C1F2F96-D2AA-405D-BE71-88E70132CAC4" structureRef="se.fk.rimfrost.framework.process.RegelProcessResult" />
   <itemDefinition id="_1862F301-8326-4940-AF4C-7E91B7630379" structureRef="se.fk.rimfrost.framework.regel.RegelErrorInformation" />
+  <itemDefinition id="Type" structureRef="" />
+  <itemDefinition id="template-regel-komplettering-requestsType" structureRef="se.fk.rimfrost.framework.regel.RegelRequestMessagePayloadData" />
+  <itemDefinition id="template-regel-komplettering-responsesType" structureRef="se.fk.rimfrost.framework.regel.RegelResponseMessagePayloadData" />
   <message id="_267C0DF6-F5C1-45A9-8ECE-4A16F0DB91FD" itemRef="Type" name="" />
   <message id="_4ED3EDCF-B10E-40F0-AE5B-FB4EAB9ACE33" itemRef="Type" name="" />
   <message id="_74310893-36FF-4D77-9415-AC779B520F39" itemRef="template-regel-komplettering-requestsType" name="template-regel-komplettering-requests" />
   <message id="_AE2B35C7-6E4B-4D6C-B98C-70613F218375" itemRef="template-regel-komplettering-responsesType" name="template-regel-komplettering-responses" />
+  <message id="_F9DE87D9-BEF1-438B-854A-5DBDB194C35E" itemRef="Type" name="" />
+  <message id="_506A4BD5-21AF-41EE-9A68-7F13D238BBC4" itemRef="Type" name="" />
+  <message id="_1AC6C3E4-90BD-4644-B048-730FD0049BAA" itemRef="Type" name="" />
+  <message id="_8B98CCB2-34BB-42BF-9580-812641528854" itemRef="Type" name="" />
+  <message id="_5E996EE7-AC50-4F0C-8AF7-790541D05E1B" itemRef="Type" name="" />
+  <message id="_170B56F4-008A-4B57-85E2-5B81C235009C" itemRef="Type" name="" />
+  <message id="_B0B0AAE6-436B-42EE-8892-DCC16A833030" itemRef="Type" name="" />
+  <message id="_232B26D4-D13E-4325-8C3E-9F6952B52C60" itemRef="Type" name="" />
   <interface id="_10588BE8-72DC-44B0-810B-0A44875857CA" name="se.fk.rimfrost.framework.process.RegelService">
     <operation id="_9623EA6F-D8E8-4792-9AB7-006077AA74CC" name="init">
       <inMessageRef>_267C0DF6-F5C1-45A9-8ECE-4A16F0DB91FD</inMessageRef>
       <outMessageRef>_4ED3EDCF-B10E-40F0-AE5B-FB4EAB9ACE33</outMessageRef>
     </operation>
+    <operation id="_EF371E86-1EC2-4885-9356-D39044CFC452" name="createRegelRequest">
+      <inMessageRef>_F9DE87D9-BEF1-438B-854A-5DBDB194C35E</inMessageRef>
+      <outMessageRef>_506A4BD5-21AF-41EE-9A68-7F13D238BBC4</outMessageRef>
+    </operation>
+    <operation id="_978A48CB-8F5E-4A27-9C36-08CD95F02D6B" name="onRegelResponse">
+      <inMessageRef>_1AC6C3E4-90BD-4644-B048-730FD0049BAA</inMessageRef>
+      <outMessageRef>_8B98CCB2-34BB-42BF-9580-812641528854</outMessageRef>
+    </operation>
+    <operation id="_108A2CA1-5D22-461C-8148-303F7B62ACF7" name="handleError">
+      <inMessageRef>_5E996EE7-AC50-4F0C-8AF7-790541D05E1B</inMessageRef>
+      <outMessageRef>_170B56F4-008A-4B57-85E2-5B81C235009C</outMessageRef>
+    </operation>
+    <operation id="_37A02099-57C3-4433-AF55-E3C0E857B18A" name="handleTimeout">
+      <inMessageRef>_B0B0AAE6-436B-42EE-8892-DCC16A833030</inMessageRef>
+      <outMessageRef>_232B26D4-D13E-4325-8C3E-9F6952B52C60</outMessageRef>
+    </operation>
   </interface>
-  <process id="template_komplettering_id">
+  <process id="template_komplettering_id" drools:packageName="rimfrost" drools:version="1.0" drools:adHoc="false" name="template" isExecutable="true" processType="Public">
     <property id="_5CC79038-3392-4F5A-A65D-DD237DD63B40" name="handlaggningId" itemSubjectRef="_9619EA7B-E00C-4ACD-A7C4-3AB437D1D6E9" />
     <property id="_92D6EBF8-D629-4E8D-B6A1-4487862EFC1C" name="aktivitetId" itemSubjectRef="_9619EA7B-E00C-4ACD-A7C4-3AB437D1D6E9" />
     <property id="_690EEA57-CE76-40FF-BBCC-BD603B5B701E" name="maxAttempts" itemSubjectRef="_9785D7E3-9D87-4C1C-808E-264CA8081969" />
