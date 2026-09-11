@@ -27,15 +27,21 @@ Följande är en lista av anpassningar som behöver utföras för att
 skapa en ny regelprocess med denna template. Notera att vissa av
 dess punkter även har märkts upp med TODO i relevanta filer.
 
-1. Uppdatera det inkommande kafka-topic som finns i application.properties
-2. Uppdatera det utgående kafka-topic som finns i application.properties
+1. Uppdatera de inkommande kafka-topics som finns i application.properties
+2. Uppdatera de utgående kafka-topics som finns i application.properties
 3. Byt ut "-template-regel-responses" till utgående kafka topic för variablen TEMPLATE_RESPONSE_TOPIC_NAME
-4. Byt namn på property "TEMPLATE_RESPONSE_TOPIC_NAME" till något unikt för denna subprocess
-5. Uppdatera det ID som finns i template_regel.bpmn
-6. Uppdatera de mellanliggande meddelanden som finns template_regel.bpmn att använda samma kafka topics som angavs i application.properties
-7. Uppdatera "Create Request" data mapping "responseTopicProperty" till det unika namnet för denna subprocess som du valde i punkt 3.
-8. Byt namn på template_regel.bpmn till lämpligt namn för regeln
-9. Uppdatera artifactId i pom.xml
+4. Byt ut "-template-regel-komplettering-responses" till utgående kafka topic för variablen TEMPLATE_KOMPLETTERING_RESPONSE_TOPIC_NAME
+5. Byt namn på properties "TEMPLATE_RESPONSE_TOPIC_NAME" och "TEMPLATE_KOMPLETTERING_RESPONSE_TOPIC_NAME" till något unikt för denna subprocess
+6. Uppdatera det ID som finns i template_regel.bpmn
+7. Uppdatera det ID som finns i template_komplettering.bpmn
+8. Uppdatera "Called element" i "Komplettering" och "Regel" i template.bpmn till det du satte som ID i punkt 6 och 7.
+9. Uppdatera de mellanliggande meddelanden som finns template_regel.bpmn att använda samma kafka topics som angavs i application.properties
+10. Uppdatera de mellanliggande meddelanden som finns template_komplettering.bpmn att använda samma kafka topics som angavs i application.properties
+11. Uppdatera "Create Request" data mapping "responseTopicProperty" i template_regel.bpmn till det unika namnet för denna subprocess som du valde i punkt 3.
+12. Uppdatera "Create Request" data mapping "responseTopicProperty" i template_komplettering.bpmn till det unika namnet för denna subprocess som du valde i punkt 4.
+13. Byt namn på template_regel.bpmn till lämpligt namn för regeln
+14. Byt namn på template_komplettering.bpmn till lämpligt namn för regeln
+15. Uppdatera artifactId i pom.xml
 
 ## Bygg artefakt för lokal testning
 
