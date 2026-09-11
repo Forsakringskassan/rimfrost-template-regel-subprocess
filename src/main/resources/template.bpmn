@@ -3,7 +3,7 @@
   <itemDefinition id="_29364667-E6E7-4DB9-856D-0C642629D460" structureRef="String" />
   <itemDefinition id="_2B8BC094-7388-49EA-8A83-7C44FA770376" structureRef="Integer" />
   <itemDefinition id="_E0BFA9FD-8586-44C0-8BD7-49B4BAF7A405" structureRef="se.fk.rimfrost.framework.process.RegelProcessResult" />
-  <process id="template">
+  <process id="template_id">
     <property id="_084DBDA3-BC59-4EBE-A23B-6820FE676A34" name="handlaggningId" itemSubjectRef="_29364667-E6E7-4DB9-856D-0C642629D460" />
     <property id="_DA30F43B-D984-486D-92C5-7854EB361F99" name="aktivitetId" itemSubjectRef="_29364667-E6E7-4DB9-856D-0C642629D460" />
     <property id="_AD6F1E49-4135-4FF4-B80D-5CD768DCA2CC" name="maxAttempts" itemSubjectRef="_2B8BC094-7388-49EA-8A83-7C44FA770376" />
