@@ -2,6 +2,17 @@
 
 Changelog of rimfrost-template-regel-subprocess.
 
+## 1.1.2 (2026-09-14)
+
+### Bug Fixes
+
+-  add package name ([892e0](https://github.com/Forsakringskassan/rimfrost-template-regel-subprocess/commit/892e00a149aeb56) Nils Elveros)  
+-  updated id of template ([ca22c](https://github.com/Forsakringskassan/rimfrost-template-regel-subprocess/commit/ca22cf2cdd5b84e) Nils Elveros)  
+-  add komplettering to template ([fb11a](https://github.com/Forsakringskassan/rimfrost-template-regel-subprocess/commit/fb11a5f13929f73) Nils Elveros)  
+
+### Dependency updates
+
+- pin forsakringskassan/.github action to d1349e6 ([c5269](https://github.com/Forsakringskassan/rimfrost-template-regel-subprocess/commit/c5269a58dcc240c) renovate[bot])  
 ## 1.1.1 (2026-06-30)
 
 ### Bug Fixes
