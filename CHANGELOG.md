@@ -2,6 +2,12 @@
 
 Changelog of rimfrost-template-regel-subprocess.
 
+## 1.1.3 (2026-09-23)
+
+### Bug Fixes
+
+-  bump rimfrost-framework-regel-asyncapi to 1.1.4 and rimfrost-framework-process to 1.6.4 ([23c6a](https://github.com/Forsakringskassan/rimfrost-template-regel-subprocess/commit/23c6ab54659e0b5) Ulf Slunga)  
+
 ## 1.1.2 (2026-09-14)
 
 ### Bug Fixes
