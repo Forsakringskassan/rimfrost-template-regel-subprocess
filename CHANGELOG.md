@@ -2,6 +2,19 @@
 
 Changelog of rimfrost-template-regel-subprocess.
 
+## 1.1.4 (2026-10-30)
+
+### Bug Fixes
+
+-  bump rimfrost-framework-regel-asyncapi to 1.2.0 and rimfrost-framework-process to 1.6.7 ([3ff0d](https://github.com/Forsakringskassan/rimfrost-template-regel-subprocess/commit/3ff0d06471f55af) Ulf Slunga)  
+-  rename and simplify GitHub Actions workflow files ([76325](https://github.com/Forsakringskassan/rimfrost-template-regel-subprocess/commit/7632521beef93e6) Ulf Slunga)  
+
+### Dependency updates
+
+- update forsakringskassan/.github digest to cbd74f1 ([0b36c](https://github.com/Forsakringskassan/rimfrost-template-regel-subprocess/commit/0b36c8307301fba) renovate[bot])  
+- update forsakringskassan/.github digest to bfb01f7 ([63db6](https://github.com/Forsakringskassan/rimfrost-template-regel-subprocess/commit/63db6be9fd73413) renovate[bot])  
+## rimfrost-1_2 (2026-09-23)
+
 ## 1.1.3 (2026-09-23)
 
 ### Bug Fixes
