@@ -2,6 +2,16 @@
 
 Changelog of rimfrost-template-regel-subprocess.
 
+## 1.1.5 (2026-11-11)
+
+### Bug Fixes
+
+-  remove replyto from regelrequest (FKPOC-1279) ([3addc](https://github.com/Forsakringskassan/rimfrost-template-regel-subprocess/commit/3addc395de9a00e) LisaWedin_Ductus)  
+
+### Dependency updates
+
+- update forsakringskassan/.github digest to cbc0db8 ([682c5](https://github.com/Forsakringskassan/rimfrost-template-regel-subprocess/commit/682c5a99f5bfb4d) renovate[bot])  
+- update forsakringskassan/.github digest to 625efb1 ([bae16](https://github.com/Forsakringskassan/rimfrost-template-regel-subprocess/commit/bae1651cff6c892) renovate[bot])  
 ## 1.1.4 (2026-10-30)
 
 ### Bug Fixes
