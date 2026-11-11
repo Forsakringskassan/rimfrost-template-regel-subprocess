@@ -195,12 +195,10 @@
       <bpmn2:ioSpecification id="_94F01EDC-8840-4B44-A84B-E13FFBBC5CB6">
         <bpmn2:dataInput id="_CA3B93F1-2417-478F-B6D0-44F0DB269F69" name="handlaggningId" drools:dtype="String" itemSubjectRef="__428739B8-C962-4EBE-A16B-6E2B5133D50B_aktivitetIdInputXItem" />
         <bpmn2:dataInput id="_410BF419-2364-4052-9C23-68253CCE448D" name="aktivitetId" drools:dtype="String" itemSubjectRef="__428739B8-C962-4EBE-A16B-6E2B5133D50B_aktivitetIdInputXItem" />
-        <bpmn2:dataInput id="_DD63256B-8AC0-47CF-B700-83D599BA9019" name="responseTopicProperty" drools:dtype="String" itemSubjectRef="__428739B8-C962-4EBE-A16B-6E2B5133D50B_aktivitetIdInputXItem" />
         <bpmn2:dataOutput name="request" id="_CDA58F18-515D-4B01-9F07-61023ACDA963" drools:dtype="se.fk.rimfrost.framework.regel.RegelRequestMessagePayloadData" itemSubjectRef="template-regel-requestsType" />
         <bpmn2:inputSet id="_722724A1-0B05-431B-8164-DFC6A992155C">
           <bpmn2:dataInputRefs>_CA3B93F1-2417-478F-B6D0-44F0DB269F69</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>_410BF419-2364-4052-9C23-68253CCE448D</bpmn2:dataInputRefs>
-          <bpmn2:dataInputRefs>_DD63256B-8AC0-47CF-B700-83D599BA9019</bpmn2:dataInputRefs>
         </bpmn2:inputSet>
         <bpmn2:outputSet id="_216DD357-F463-4B62-8D34-DF5BC4ECF986">
           <bpmn2:dataOutputRefs>_CDA58F18-515D-4B01-9F07-61023ACDA963</bpmn2:dataOutputRefs>
@@ -213,13 +211,6 @@
       <bpmn2:dataInputAssociation id="_0CED54A7-6FAF-48AC-B715-6EC196F150AD">
         <bpmn2:sourceRef>aktivitetId</bpmn2:sourceRef>
         <bpmn2:targetRef>_410BF419-2364-4052-9C23-68253CCE448D</bpmn2:targetRef>
-      </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_5ABF0FB6-3C4F-482D-A4C7-E8F89F885090">
-        <bpmn2:targetRef>_DD63256B-8AC0-47CF-B700-83D599BA9019</bpmn2:targetRef>
-        <bpmn2:assignment id="_DF8FD552-7397-4D56-BA79-A173BAA2F52A">
-          <bpmn2:from id="_AC793517-89CB-48BE-B22C-A449F140DCA2" xsi:type="tFormalExpression">TEMPLATE_RESPONSE_TOPIC_NAME</bpmn2:from>
-          <bpmn2:to id="_4AF381B6-6150-4877-8E3A-1127BF1C42B2">_DD63256B-8AC0-47CF-B700-83D599BA9019</bpmn2:to>
-        </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
       <bpmn2:dataOutputAssociation id="_E260C4C2-817D-415B-AA7A-31D89EF8A937">
         <bpmn2:sourceRef>_CDA58F18-515D-4B01-9F07-61023ACDA963</bpmn2:sourceRef>

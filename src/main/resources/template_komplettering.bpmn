@@ -158,12 +158,10 @@
       <ioSpecification id="_B51B58F6-E8BA-4E0A-8349-D08A70FCC3E1">
         <dataInput id="_B9BF3964-DF2A-4E34-AC29-25BFB9ABEAA1" name="handlaggningId" drools:dtype="String" itemSubjectRef="_9619EA7B-E00C-4ACD-A7C4-3AB437D1D6E9" />
         <dataInput id="_4526A2E9-29B4-496E-9318-ADC5207E3550" name="aktivitetId" drools:dtype="String" itemSubjectRef="_9619EA7B-E00C-4ACD-A7C4-3AB437D1D6E9" />
-        <dataInput id="_992897A1-23DA-46EC-9A24-FCB8EFA457FB" name="responseTopicProperty" drools:dtype="String" itemSubjectRef="_9619EA7B-E00C-4ACD-A7C4-3AB437D1D6E9" />
         <dataOutput name="request" id="_3F043AF0-9F3E-4F7F-B651-CB5F68A8CED9" drools:dtype="se.fk.rimfrost.framework.regel.RegelRequestMessagePayloadData" itemSubjectRef="_61E15F60-F25B-4E4B-B110-46CA32A5281C" />
         <inputSet id="_5FECE6EB-A717-4E8A-AC89-C53B7CEF1EA8">
           <dataInputRefs>_B9BF3964-DF2A-4E34-AC29-25BFB9ABEAA1</dataInputRefs>
           <dataInputRefs>_4526A2E9-29B4-496E-9318-ADC5207E3550</dataInputRefs>
-          <dataInputRefs>_992897A1-23DA-46EC-9A24-FCB8EFA457FB</dataInputRefs>
         </inputSet>
         <outputSet id="_D7BAE696-91E6-4F70-86DB-71A5E3076AB6">
           <dataOutputRefs>_3F043AF0-9F3E-4F7F-B651-CB5F68A8CED9</dataOutputRefs>
@@ -176,13 +174,6 @@
       <dataInputAssociation id="_465DC2AA-9D96-4EA6-923B-7317CB1D73CD">
         <sourceRef>_92D6EBF8-D629-4E8D-B6A1-4487862EFC1C</sourceRef>
         <targetRef>_4526A2E9-29B4-496E-9318-ADC5207E3550</targetRef>
-      </dataInputAssociation>
-      <dataInputAssociation id="_00C38058-12DE-464B-91A7-DE27D1FD566C">
-        <targetRef>_992897A1-23DA-46EC-9A24-FCB8EFA457FB</targetRef>
-        <assignment id="_9966B8F8-0317-4070-912B-B71F266FD9E3">
-          <from id="_1D20CF20-7C1A-4976-B038-B46B6F8CD266" xsi:type="tFormalExpression">TEMPLATE_KOMPLETTERING_RESPONSE_TOPIC_NAME</from>
-          <to id="_0DE19074-19FE-4048-80A6-A1A96B00CA2B">_992897A1-23DA-46EC-9A24-FCB8EFA457FB</to>
-        </assignment>
       </dataInputAssociation>
       <dataOutputAssociation id="_D88B9886-7855-4A96-99DB-9135E7748A92">
         <sourceRef>_3F043AF0-9F3E-4F7F-B651-CB5F68A8CED9</sourceRef>
