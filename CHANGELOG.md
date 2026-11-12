@@ -2,6 +2,12 @@
 
 Changelog of rimfrost-template-regel-subprocess.
 
+## 1.2.0 (2026-11-12)
+
+### Features
+
+-  Add kommunicering regel template ([840de](https://github.com/Forsakringskassan/rimfrost-template-regel-subprocess/commit/840def5ba939d69) Lars Persson)  
+
 ## 1.1.7 (2026-11-12)
 
 ### Bug Fixes
