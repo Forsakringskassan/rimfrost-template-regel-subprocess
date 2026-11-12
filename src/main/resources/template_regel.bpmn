@@ -24,6 +24,7 @@
   <bpmn2:itemDefinition id="_45AC32BE-2426-43B8-A409-D0119C9E4EBA" structureRef="Integer" />
   <bpmn2:itemDefinition id="Type" structureRef="" />
   <bpmn2:itemDefinition id="regel-oul-cancelledType" structureRef="se.fk.rimfrost.framework.regel.oul.RegelOulCancelledMessagePayloadData" />
+  <bpmn2:itemDefinition id="template-regel-oul-cancelledType" structureRef="se.fk.rimfrost.framework.regel.oul.RegelOulCancelledMessagePayloadData" />
   <bpmn2:message id="_428739B8-C962-4EBE-A16B-6E2B5133D50B_InMessage" itemRef="_428739B8-C962-4EBE-A16B-6E2B5133D50B_InMessageType" />
   <bpmn2:message id="_428739B8-C962-4EBE-A16B-6E2B5133D50B_OutMessage" itemRef="_428739B8-C962-4EBE-A16B-6E2B5133D50B_OutMessageType" />
   <bpmn2:message id="_EB1970E1-7AA3-44EC-98B2-981698344C2A_InMessage" itemRef="_EB1970E1-7AA3-44EC-98B2-981698344C2A_InMessageType" />
