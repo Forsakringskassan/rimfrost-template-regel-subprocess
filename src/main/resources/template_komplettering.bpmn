@@ -9,6 +9,7 @@
   <itemDefinition id="_1862F301-8326-4940-AF4C-7E91B7630379" structureRef="se.fk.rimfrost.framework.regel.RegelErrorInformation" />
   <itemDefinition id="Type" structureRef="" />
   <itemDefinition id="regel-oul-cancelledType" structureRef="se.fk.rimfrost.framework.regel.oul.RegelOulCancelledMessagePayloadData" />
+  <itemDefinition id="template-regel-komplettering-oul-cancelledType" structureRef="se.fk.rimfrost.framework.regel.oul.RegelOulCancelledMessagePayloadData" />
   <itemDefinition id="template-regel-komplettering-requestsType" structureRef="se.fk.rimfrost.framework.regel.RegelRequestMessagePayloadData" />
   <itemDefinition id="template-regel-komplettering-responsesType" structureRef="se.fk.rimfrost.framework.regel.RegelResponseMessagePayloadData" />
   <message id="_267C0DF6-F5C1-45A9-8ECE-4A16F0DB91FD" itemRef="Type" name="" />
@@ -26,7 +27,6 @@
   <message id="_A8E5C3F1-2D7B-4A9E-B6C4-1F0E9D8C7B62" itemRef="regel-oul-cancelledType" name="regel-oul-cancelled" />
   <message id="_1D040817-0BF0-42A8-BB0B-56A9BFB8F448" itemRef="Type" name="" />
   <message id="_15E1AEB5-0C2B-4331-9E82-2041128A69A2" itemRef="Type" name="" />
-  <message id="_CEC31C88-45C3-4921-A1D7-2663D4202A18" itemRef="regel-oul-komplettering-cancelledType" name="regel-oul-komplettering-cancelled" />
   <message id="_E5F0F587-70FC-4E70-B268-891F198F951C" itemRef="template-regel-komplettering-oul-cancelledType" name="template-regel-komplettering-oul-cancelled" />
   <interface id="_10588BE8-72DC-44B0-810B-0A44875857CA" name="se.fk.rimfrost.framework.process.RegelService">
     <operation id="_9623EA6F-D8E8-4792-9AB7-006077AA74CC" name="init">
