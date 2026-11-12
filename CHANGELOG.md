@@ -2,6 +2,22 @@
 
 Changelog of rimfrost-template-regel-subprocess.
 
+## 1.1.6 (2026-11-12)
+
+### Bug Fixes
+
+-  kafka topics ([74299](https://github.com/Forsakringskassan/rimfrost-template-regel-subprocess/commit/74299331c487f69) Nils Elveros)  
+-  add todo in application properties ([d506d](https://github.com/Forsakringskassan/rimfrost-template-regel-subprocess/commit/d506d98bc1d02c6) Nils Elveros)  
+-  send oul cancel message after timeout ([18453](https://github.com/Forsakringskassan/rimfrost-template-regel-subprocess/commit/18453e6b27bf8cb) Nils Elveros)  
+
+### Other changes
+
+**Merge branch 'main' into fix/FKPOC-1297-send-oul-cancel**
+
+
+[c660c](https://github.com/Forsakringskassan/rimfrost-template-regel-subprocess/commit/c660c19758c8e4e) NilsElveros *2026-11-12 10:49:02*
+
+
 ## 1.1.5 (2026-11-11)
 
 ### Bug Fixes
