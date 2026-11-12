@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:drools="http://www.jboss.org/drools" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" namespace="https://kie.org/bpmn/_160AAD27-AC5B-49C8-B916-1D181B292A02" id="_195837C7-1E2D-4B4E-89BA-5EE0AB15A836" name="BPMN_79F5484E-1394-43ED-8DF7-8C35B4CAB208">
+  <itemDefinition id="_9619EA7B-E00C-4ACD-A7C4-3AB437D1D6E9" structureRef="String" />
+  <itemDefinition id="_9785D7E3-9D87-4C1C-808E-264CA8081969" structureRef="Integer" />
+  <itemDefinition id="_61E15F60-F25B-4E4B-B110-46CA32A5281C" structureRef="se.fk.rimfrost.framework.regel.RegelRequestMessagePayloadData" />
+  <itemDefinition id="_21E76E6F-F6B9-409F-8462-574378B5B473" structureRef="se.fk.rimfrost.framework.regel.RegelResponseMessagePayloadData" />
+  <itemDefinition id="_8C1F2F96-D2AA-405D-BE71-88E70132CAC4" structureRef="se.fk.rimfrost.framework.process.RegelProcessResult" />
+  <itemDefinition id="_1862F301-8326-4940-AF4C-7E91B7630379" structureRef="se.fk.rimfrost.framework.regel.RegelErrorInformation" />
+  <itemDefinition id="Type" structureRef="" />
+  <itemDefinition id="template-regel-kommunicering-requestsType" structureRef="se.fk.rimfrost.framework.regel.RegelRequestMessagePayloadData" />
+  <itemDefinition id="template-regel-kommunicering-responsesType" structureRef="se.fk.rimfrost.framework.regel.RegelResponseMessagePayloadData" />
+  <itemDefinition id="template-regel-kommunicering-oul-cancelledType" structureRef="se.fk.rimfrost.framework.regel.oul.RegelOulCancelledMessagePayloadData" />
+  <message id="_267C0DF6-F5C1-45A9-8ECE-4A16F0DB91FD" itemRef="Type" name="" />
+  <message id="_4ED3EDCF-B10E-40F0-AE5B-FB4EAB9ACE33" itemRef="Type" name="" />
+  <message id="_F9DE87D9-BEF1-438B-854A-5DBDB194C35E" itemRef="Type" name="" />
+  <message id="_506A4BD5-21AF-41EE-9A68-7F13D238BBC4" itemRef="Type" name="" />
+  <message id="_1AC6C3E4-90BD-4644-B048-730FD0049BAA" itemRef="Type" name="" />
+  <message id="_8B98CCB2-34BB-42BF-9580-812641528854" itemRef="Type" name="" />
+  <message id="_5E996EE7-AC50-4F0C-8AF7-790541D05E1B" itemRef="Type" name="" />
+  <message id="_170B56F4-008A-4B57-85E2-5B81C235009C" itemRef="Type" name="" />
+  <message id="_1D040817-0BF0-42A8-BB0B-56A9BFB8F448" itemRef="Type" name="" />
+  <message id="_15E1AEB5-0C2B-4331-9E82-2041128A69A2" itemRef="Type" name="" />
+  <message id="_A2DFA1FE-0A8B-44B9-BEF4-F2623174BE97" itemRef="template-regel-kommunicering-requestsType" name="template-regel-kommunicering-requests" />
+  <message id="_62691CA9-F2D2-43F5-8C05-4D5E290F0158" itemRef="template-regel-kommunicering-responsesType" name="template-regel-kommunicering-responses" />
+  <message id="_FC582BFE-7701-4390-970C-BAA836001141" itemRef="template-regel-kommunicering-oul-cancelledType" name="template-regel-kommunicering-oul-cancelled" />
+  <interface id="_10588BE8-72DC-44B0-810B-0A44875857CA" name="se.fk.rimfrost.framework.process.RegelService">
+    <operation id="_9623EA6F-D8E8-4792-9AB7-006077AA74CC" name="init">
+      <inMessageRef>_267C0DF6-F5C1-45A9-8ECE-4A16F0DB91FD</inMessageRef>
+      <outMessageRef>_4ED3EDCF-B10E-40F0-AE5B-FB4EAB9ACE33</outMessageRef>
+    </operation>
+    <operation id="_EF371E86-1EC2-4885-9356-D39044CFC452" name="createRegelRequest">
+      <inMessageRef>_F9DE87D9-BEF1-438B-854A-5DBDB194C35E</inMessageRef>
+      <outMessageRef>_506A4BD5-21AF-41EE-9A68-7F13D238BBC4</outMessageRef>
+    </operation>
+    <operation id="_978A48CB-8F5E-4A27-9C36-08CD95F02D6B" name="onRegelResponse">
+      <inMessageRef>_1AC6C3E4-90BD-4644-B048-730FD0049BAA</inMessageRef>
+      <outMessageRef>_8B98CCB2-34BB-42BF-9580-812641528854</outMessageRef>
+    </operation>
+    <operation id="_108A2CA1-5D22-461C-8148-303F7B62ACF7" name="handleError">
+      <inMessageRef>_5E996EE7-AC50-4F0C-8AF7-790541D05E1B</inMessageRef>
+      <outMessageRef>_170B56F4-008A-4B57-85E2-5B81C235009C</outMessageRef>
+    </operation>
+    <operation id="_8A62875B-ACBA-407A-B262-78D328315277" name="createRegelOulCancelled">
+      <inMessageRef>_1D040817-0BF0-42A8-BB0B-56A9BFB8F448</inMessageRef>
+      <outMessageRef>_15E1AEB5-0C2B-4331-9E82-2041128A69A2</outMessageRef>
+    </operation>
+  </interface>
+  <process id="template_kommunicering_id" drools:packageName="rimfrost" drools:version="1.0" drools:adHoc="false" name="template" isExecutable="true" processType="Public">
+    <extensionElements>
+      <drools:import name="se.fk.rimfrost.framework.regel.RegelResponseMessagePayloadData" />
+      <drools:import name="se.fk.rimfrost.framework.regel.Utfall" />
+    </extensionElements>
+    <property id="_5CC79038-3392-4F5A-A65D-DD237DD63B40" name="handlaggningId" itemSubjectRef="_9619EA7B-E00C-4ACD-A7C4-3AB437D1D6E9" />
+    <property id="_92D6EBF8-D629-4E8D-B6A1-4487862EFC1C" name="aktivitetId" itemSubjectRef="_9619EA7B-E00C-4ACD-A7C4-3AB437D1D6E9" />
+    <property id="_690EEA57-CE76-40FF-BBCC-BD603B5B701E" name="maxAttempts" itemSubjectRef="_9785D7E3-9D87-4C1C-808E-264CA8081969" />
+    <property id="_0F7920A7-5B2A-4EBC-B04E-F5F403ECB929" name="request" itemSubjectRef="_61E15F60-F25B-4E4B-B110-46CA32A5281C" />
+    <property id="_E2AB22F3-BAC8-4893-8BFD-63286B64A91A" name="response" itemSubjectRef="_21E76E6F-F6B9-409F-8462-574378B5B473" />
+    <property id="_3658FB6B-38D1-4875-85AB-5D721CBE57A9" name="result" itemSubjectRef="_8C1F2F96-D2AA-405D-BE71-88E70132CAC4" />
+    <property id="_463C3B53-5869-4394-8D42-9385CCC7E871" name="retryDelay" itemSubjectRef="_9619EA7B-E00C-4ACD-A7C4-3AB437D1D6E9" />
+    <property id="_0F8C7459-164E-4AE4-82BE-7AD7C4C13C70" name="attempts" itemSubjectRef="_9785D7E3-9D87-4C1C-808E-264CA8081969" />
+    <property id="_1464FFA9-0110-4BD7-8624-0B9FBE7FA9A4" name="errorInfo" itemSubjectRef="_1862F301-8326-4940-AF4C-7E91B7630379" />
+    <property id="_B97FEB7D-B1C1-42CB-B31B-C0EE383C4FC6" name="responseTimeout" itemSubjectRef="_9619EA7B-E00C-4ACD-A7C4-3AB437D1D6E9" />
+    <property id="_9E0C1B2A-3D4F-4A5B-8C6D-7E8F9A0B1C2D" name="cancelledMessage" itemSubjectRef="template-regel-kommunicering-oul-cancelledType" />
+    <laneSet id="_45AD130F-DA8A-4A09-981A-47E3EE893387" />
+    <startEvent id="_379328FA-CA0D-4953-ADE7-E12791131023">
+      <outgoing>_60151426-5F6C-4434-A79A-05D248DBEA83</outgoing>
+    </startEvent>
+    <serviceTask id="_0AAD7B9F-70B7-460C-B06A-F726CCC437F6" name="Init" drools:serviceinterface="se.fk.rimfrost.framework.process.RegelService" operationRef="_9623EA6F-D8E8-4792-9AB7-006077AA74CC" drools:serviceoperation="init">
+      <incoming>_60151426-5F6C-4434-A79A-05D248DBEA83</incoming>
+      <outgoing>_C386F286-5E3F-46E3-96BC-D1D5FD43798A</outgoing>
+      <ioSpecification id="_14039015-96FA-46DC-B439-A03F1425D09B">
+        <inputSet id="_82075C7A-1D53-467F-89BB-352437388E6E" />
+        <outputSet id="_617DA63C-9C00-483A-9171-C8622ECC6E38" />
+      </ioSpecification>
+    </serviceTask>
+    <serviceTask id="_2C54FDE1-83F8-44A4-9DD9-ACFCEA06337A" drools:serviceimplementation="Java" drools:serviceinterface="se.fk.rimfrost.framework.process.RegelService" drools:serviceoperation="createRegelRequest" name="Create Request" implementation="Java" operationRef="_EF371E86-1EC2-4885-9356-D39044CFC452">
+      <incoming>_C386F286-5E3F-46E3-96BC-D1D5FD43798A</incoming>
+      <outgoing>_8359D825-F55E-47C5-B671-C5CAD089FD92</outgoing>
+      <ioSpecification id="_7776EE3A-A222-4B47-A8C5-02B8EF71F53E">
+        <dataInput id="_187887D1-E067-4163-A886-638B533613A1" name="handlaggningId" drools:dtype="String" itemSubjectRef="_9619EA7B-E00C-4ACD-A7C4-3AB437D1D6E9" />
+        <dataInput id="_93D292CC-B7DB-44D2-9F72-5EDB316F3631" name="aktivitetId" drools:dtype="String" itemSubjectRef="_9619EA7B-E00C-4ACD-A7C4-3AB437D1D6E9" />
+        <dataOutput name="request" id="_8FE6F20D-5C9E-4152-9EEB-C8B19BD4BA68" drools:dtype="se.fk.rimfrost.framework.regel.RegelRequestMessagePayloadData" itemSubjectRef="template-regel-kommunicering-requestsType" />
+        <inputSet id="_7F84D266-775A-4CB8-8EB6-0F45C92BE8F8">
+          <dataInputRefs>_187887D1-E067-4163-A886-638B533613A1</dataInputRefs>
+          <dataInputRefs>_93D292CC-B7DB-44D2-9F72-5EDB316F3631</dataInputRefs>
+        </inputSet>
+        <outputSet id="_010C9DE0-2A6D-4815-9EC7-32283518D75D">
+          <dataOutputRefs>_8FE6F20D-5C9E-4152-9EEB-C8B19BD4BA68</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation id="_873B2C09-D3DC-497D-BB04-905BDCD118A8">
+        <sourceRef>_5CC79038-3392-4F5A-A65D-DD237DD63B40</sourceRef>
+        <targetRef>_187887D1-E067-4163-A886-638B533613A1</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation id="_AAE09F5C-7D19-4489-9CDF-9CC04A0F92BB">
+        <sourceRef>_92D6EBF8-D629-4E8D-B6A1-4487862EFC1C</sourceRef>
+        <targetRef>_93D292CC-B7DB-44D2-9F72-5EDB316F3631</targetRef>
+      </dataInputAssociation>
+      <dataOutputAssociation id="_7395E780-9159-4D61-A52C-F465AD95023D">
+        <sourceRef>_8FE6F20D-5C9E-4152-9EEB-C8B19BD4BA68</sourceRef>
+        <targetRef>_0F7920A7-5B2A-4EBC-B04E-F5F403ECB929</targetRef>
+      </dataOutputAssociation>
+    </serviceTask>
+    <exclusiveGateway id="_DF57B457-E89E-452D-9762-0CF39684011F" gatewayDirection="Converging">
+      <incoming>_8359D825-F55E-47C5-B671-C5CAD089FD92</incoming>
+      <incoming>_234C626A-67CF-43B8-8304-C5DCB2B149D9</incoming>
+      <outgoing>_0D5CEB1D-8AE8-4CDE-939A-2488357709DF</outgoing>
+    </exclusiveGateway>
+    <intermediateThrowEvent id="_DC9CECAF-7092-4640-B341-D6348EAB0430">
+      <extensionElements>
+        <drools:metaData name="replyTo">
+          <drools:metaValue></drools:metaValue>
+        </drools:metaData>
+      </extensionElements>
+      <incoming>_0D5CEB1D-8AE8-4CDE-939A-2488357709DF</incoming>
+      <outgoing>_A9311706-D93B-4C77-A0D0-4707D951460A</outgoing>
+      <dataInput id="_910A3A5D-0D04-4633-A610-F3D671CF9350" name="request" drools:dtype="se.fk.rimfrost.framework.regel.RegelRequestMessagePayloadData" itemSubjectRef="template-regel-kommunicering-requestsType" />
+      <dataInputAssociation id="_6010C89F-15E3-4EAE-A8BB-03F2AEFEEB81">
+        <sourceRef>_0F7920A7-5B2A-4EBC-B04E-F5F403ECB929</sourceRef>
+        <targetRef>_910A3A5D-0D04-4633-A610-F3D671CF9350</targetRef>
+      </dataInputAssociation>
+      <inputSet id="_16B4DB6D-BEF2-4E14-82E6-2385FBE4E684">
+        <dataInputRefs>_910A3A5D-0D04-4633-A610-F3D671CF9350</dataInputRefs>
+      </inputSet>
+      <messageEventDefinition drools:msgref="template-regel-kommunicering-requests" messageRef="_A2DFA1FE-0A8B-44B9-BEF4-F2623174BE97" id="_10B6D92E-5D08-4F84-9C54-57A5168D976A" />
+    </intermediateThrowEvent>
+    <eventBasedGateway id="_9A6170A1-3C21-4354-BB35-39EB8CE08E77" gatewayDirection="Diverging">
+      <incoming>_A9311706-D93B-4C77-A0D0-4707D951460A</incoming>
+      <outgoing>_5C0B1EAB-A8B4-41F5-A179-761891A8A5CF</outgoing>
+      <outgoing>_235A9A38-1674-4974-8C62-22A0F6061614</outgoing>
+    </eventBasedGateway>
+    <intermediateCatchEvent id="_2A2C304E-91FC-41D3-B610-8FD216A63360">
+      <incoming>_5C0B1EAB-A8B4-41F5-A179-761891A8A5CF</incoming>
+      <outgoing>_FCB113E0-478B-419C-8259-B2DE449A09D6</outgoing>
+      <dataOutput name="event" id="_EA62289E-EBEA-4C4E-AF2A-2F6DFDD9445D" drools:dtype="se.fk.rimfrost.framework.regel.RegelResponseMessagePayloadData" itemSubjectRef="template-regel-kommunicering-responsesType" />
+      <dataOutputAssociation id="_2B00E0F8-B19C-4CC8-8F84-38EBEB65BD9E">
+        <sourceRef>_EA62289E-EBEA-4C4E-AF2A-2F6DFDD9445D</sourceRef>
+        <targetRef>_E2AB22F3-BAC8-4893-8BFD-63286B64A91A</targetRef>
+      </dataOutputAssociation>
+      <outputSet id="_1F4B1D08-5A31-42DF-B46A-AFDFF3400DC3">
+        <dataOutputRefs>_EA62289E-EBEA-4C4E-AF2A-2F6DFDD9445D</dataOutputRefs>
+      </outputSet>
+      <messageEventDefinition drools:msgref="template-regel-kommunicering-responses" messageRef="_62691CA9-F2D2-43F5-8C05-4D5E290F0158" id="_70D23A85-52E9-4ED5-80DA-DC40C787FAE2" />
+    </intermediateCatchEvent>
+    <intermediateCatchEvent id="_6041FB48-A6F0-430F-963D-0C06B651A012">
+      <incoming>_235A9A38-1674-4974-8C62-22A0F6061614</incoming>
+      <outgoing>_941A5E4C-2722-4873-B219-9411FAB3792F</outgoing>
+      <timerEventDefinition id="_92C30CBE-2E07-4B4F-B30A-0F6B255F2937">
+        <timeDuration id="_DB67B5C8-2AE2-4D09-AA26-30BF853D021E">#{responseTimeout}</timeDuration>
+      </timerEventDefinition>
+    </intermediateCatchEvent>
+    <exclusiveGateway id="_8E8CBD1C-B106-4422-B8A7-0A716F67C9BB" gatewayDirection="Diverging" default="_0E2D9067-0349-4937-AEAE-4DB603BEE833">
+      <incoming>_FCB113E0-478B-419C-8259-B2DE449A09D6</incoming>
+      <outgoing>_0E2D9067-0349-4937-AEAE-4DB603BEE833</outgoing>
+      <outgoing>_27ED3923-B22D-4866-BAF2-953A3D744352</outgoing>
+    </exclusiveGateway>
+    <exclusiveGateway id="_1D1A8853-D324-4A16-A730-348C645DF0CF" gatewayDirection="Converging">
+      <incoming>_0E2D9067-0349-4937-AEAE-4DB603BEE833</incoming>
+      <incoming>_ADE5A3FF-384A-4F45-915E-2D20299DD263</incoming>
+      <outgoing>_5FFDEEB7-C03B-43A0-8364-FF39965178F2</outgoing>
+    </exclusiveGateway>
+    <serviceTask id="_E52B9A30-2B36-4488-80FB-3987F2FF895B" drools:serviceimplementation="Java" drools:serviceinterface="se.fk.rimfrost.framework.process.RegelService" drools:serviceoperation="onRegelResponse" name="Received Response" implementation="Java" operationRef="_978A48CB-8F5E-4A27-9C36-08CD95F02D6B">
+      <incoming>_5FFDEEB7-C03B-43A0-8364-FF39965178F2</incoming>
+      <outgoing>_540DE6EE-1535-465F-92EB-9A6995022691</outgoing>
+      <ioSpecification id="_15B56AA1-136A-43C3-B845-2E84B60A5671">
+        <dataInput id="_779BD3C8-F14A-4E21-89D9-907D50BC0495" name="response" drools:dtype="se.fk.rimfrost.framework.regel.RegelResponseMessagePayloadData" itemSubjectRef="_21E76E6F-F6B9-409F-8462-574378B5B473" />
+        <dataOutput name="result" id="_61528C41-25FC-4F3B-A1B3-8EBDE126E90C" drools:dtype="se.fk.rimfrost.framework.process.RegelProcessResult" itemSubjectRef="_8C1F2F96-D2AA-405D-BE71-88E70132CAC4" />
+        <inputSet id="_A00BCEA7-96A6-4AF1-9E0C-14EC9CDE3B65">
+          <dataInputRefs>_779BD3C8-F14A-4E21-89D9-907D50BC0495</dataInputRefs>
+        </inputSet>
+        <outputSet id="_D4C027C5-F432-44E3-8954-895E9E387F9F">
+          <dataOutputRefs>_61528C41-25FC-4F3B-A1B3-8EBDE126E90C</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation id="_D5C3B5CD-580A-4600-B56C-0C1B16199B8C">
+        <sourceRef>_E2AB22F3-BAC8-4893-8BFD-63286B64A91A</sourceRef>
+        <targetRef>_779BD3C8-F14A-4E21-89D9-907D50BC0495</targetRef>
+      </dataInputAssociation>
+      <dataOutputAssociation id="_3D6957BF-EE7C-4E20-9C12-2A439C45BE29">
+        <sourceRef>_61528C41-25FC-4F3B-A1B3-8EBDE126E90C</sourceRef>
+        <targetRef>_3658FB6B-38D1-4875-85AB-5D721CBE57A9</targetRef>
+      </dataOutputAssociation>
+    </serviceTask>
+    <endEvent id="_F173EB12-5FA5-4182-A5BA-ECF0D963D17A">
+      <incoming>_540DE6EE-1535-465F-92EB-9A6995022691</incoming>
+      <dataInput id="_19A867A4-835A-4FFD-A389-2FDEB6DEFECF" name="result" drools:dtype="se.fk.rimfrost.framework.process.RegelProcessResult" itemSubjectRef="_8C1F2F96-D2AA-405D-BE71-88E70132CAC4" />
+      <dataInputAssociation id="_6C33D25A-CEF3-42E2-A779-6765B70B8DCD">
+        <sourceRef>_3658FB6B-38D1-4875-85AB-5D721CBE57A9</sourceRef>
+        <targetRef>_19A867A4-835A-4FFD-A389-2FDEB6DEFECF</targetRef>
+      </dataInputAssociation>
+      <inputSet id="_2D7B3346-B407-4D84-98EC-1D584B8A8418">
+        <dataInputRefs>_19A867A4-835A-4FFD-A389-2FDEB6DEFECF</dataInputRefs>
+      </inputSet>
+    </endEvent>
+    <serviceTask id="_B20C9ECE-33F3-4B35-B4E1-4F66D5A29FBA" name="Handle error" drools:serviceinterface="se.fk.rimfrost.framework.process.RegelService" operationRef="_108A2CA1-5D22-461C-8148-303F7B62ACF7" drools:serviceoperation="handleError">
+      <incoming>_27ED3923-B22D-4866-BAF2-953A3D744352</incoming>
+      <outgoing>_BC1D7C8E-B47B-4B95-B888-1A3A553CCF4E</outgoing>
+      <ioSpecification id="_1F393B9A-BDEC-498A-A129-7A42E6D77A56">
+        <dataInput id="_DE59C9A8-079F-479D-8300-5D8B7DC906AF" name="handlaggningId" drools:dtype="String" itemSubjectRef="_9619EA7B-E00C-4ACD-A7C4-3AB437D1D6E9" />
+        <dataInput id="_D26A0CA3-C464-4684-95F3-BC849781547A" name="response" drools:dtype="se.fk.rimfrost.framework.regel.RegelResponseMessagePayloadData" itemSubjectRef="_21E76E6F-F6B9-409F-8462-574378B5B473" />
+        <dataOutput name="result" id="_1072C64E-1399-4394-AAB9-CA3457F067FB" drools:dtype="se.fk.rimfrost.framework.process.RegelProcessResult" itemSubjectRef="_8C1F2F96-D2AA-405D-BE71-88E70132CAC4" />
+        <inputSet id="_CD0FB085-B5C6-4CFC-BD82-284FA361F8C8">
+          <dataInputRefs>_DE59C9A8-079F-479D-8300-5D8B7DC906AF</dataInputRefs>
+          <dataInputRefs>_D26A0CA3-C464-4684-95F3-BC849781547A</dataInputRefs>
+        </inputSet>
+        <outputSet id="_B2B45E8A-60FC-4B3B-BB5D-914C75994FE8">
+          <dataOutputRefs>_1072C64E-1399-4394-AAB9-CA3457F067FB</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation id="_D2CD0D6A-5364-4B72-B39F-B31F80FCA005">
+        <sourceRef>_5CC79038-3392-4F5A-A65D-DD237DD63B40</sourceRef>
+        <targetRef>_DE59C9A8-079F-479D-8300-5D8B7DC906AF</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation id="_CFA79C99-2B07-4294-93DD-CD73371E211B">
+        <sourceRef>_E2AB22F3-BAC8-4893-8BFD-63286B64A91A</sourceRef>
+        <targetRef>_D26A0CA3-C464-4684-95F3-BC849781547A</targetRef>
+      </dataInputAssociation>
+      <dataOutputAssociation id="_A255CA0B-F482-4577-A094-448EA4E6A8C8">
+        <sourceRef>_1072C64E-1399-4394-AAB9-CA3457F067FB</sourceRef>
+        <targetRef>_3658FB6B-38D1-4875-85AB-5D721CBE57A9</targetRef>
+      </dataOutputAssociation>
+    </serviceTask>
+    <scriptTask id="_84B5454A-5F17-4F25-A51E-D1973AF83CF3" name="Increment attempts" scriptFormat="http://www.java.com/java">
+      <incoming>_BC1D7C8E-B47B-4B95-B888-1A3A553CCF4E</incoming>
+      <outgoing>_3ED4CAEF-D799-4545-86EE-8FB94F9C008B</outgoing>
+      <script>kcontext.setVariable(&quot;attempts&quot;, attempts + 1);</script>
+    </scriptTask>
+    <exclusiveGateway id="_85F2B7FA-452B-4757-892D-EB9D96107E98" gatewayDirection="Diverging" default="_66723176-CB23-4A28-85A0-1182051F9B5E">
+      <incoming>_3ED4CAEF-D799-4545-86EE-8FB94F9C008B</incoming>
+      <outgoing>_66723176-CB23-4A28-85A0-1182051F9B5E</outgoing>
+      <outgoing>_F874ECF2-8F3B-4308-8FBC-4F670F91B8B9</outgoing>
+    </exclusiveGateway>
+    <intermediateCatchEvent id="_FA5C6DAF-21BF-4522-A2BB-11FB006FACBA">
+      <incoming>_F874ECF2-8F3B-4308-8FBC-4F670F91B8B9</incoming>
+      <outgoing>_234C626A-67CF-43B8-8304-C5DCB2B149D9</outgoing>
+      <timerEventDefinition id="_643C03CF-5BE3-4541-AFB9-5286AEAB0FFE">
+        <timeDuration id="_9CB22551-315D-4378-9D69-B6DA4DC2C620">#{retryDelay}</timeDuration>
+      </timerEventDefinition>
+    </intermediateCatchEvent>
+    <endEvent id="_3877E813-B711-4A87-B6CC-6C77F5F5FE5D">
+      <incoming>_66723176-CB23-4A28-85A0-1182051F9B5E</incoming>
+      <dataInput id="_3707AD6B-A27B-497F-AB79-851E4F7DCF47" name="result" drools:dtype="se.fk.rimfrost.framework.process.RegelProcessResult" itemSubjectRef="_8C1F2F96-D2AA-405D-BE71-88E70132CAC4" />
+      <dataInputAssociation id="_7CC93E49-912D-42C3-8CF9-EDA0A762B3E5">
+        <sourceRef>_3658FB6B-38D1-4875-85AB-5D721CBE57A9</sourceRef>
+        <targetRef>_3707AD6B-A27B-497F-AB79-851E4F7DCF47</targetRef>
+      </dataInputAssociation>
+      <inputSet id="_F6EC7166-BC93-4272-BD49-3CFC8458684E">
+        <dataInputRefs>_3707AD6B-A27B-497F-AB79-851E4F7DCF47</dataInputRefs>
+      </inputSet>
+    </endEvent>
+    <serviceTask id="_AAE57DA3-255E-4F8C-8F0A-004E4A0B3EBC" name="Create cancelled message" drools:serviceinterface="se.fk.rimfrost.framework.process.RegelService" operationRef="_8A62875B-ACBA-407A-B262-78D328315277" drools:serviceoperation="createRegelOulCancelled">
+      <incoming>_941A5E4C-2722-4873-B219-9411FAB3792F</incoming>
+      <outgoing>_AA96CC92-9DF3-46E3-AEBA-436D338A6C7F</outgoing>
+      <ioSpecification id="_2D7DC17C-97CF-422F-8D8C-C3C99EB47937">
+        <dataInput id="_52293825-796A-4733-A436-96F4984FE15D" name="handlaggningId" drools:dtype="String" itemSubjectRef="_9619EA7B-E00C-4ACD-A7C4-3AB437D1D6E9" />
+        <dataOutput name="cancelledMessage" id="_E1015604-201A-4F55-9B71-D266A2138512" drools:dtype="se.fk.rimfrost.framework.regel.oul.RegelOulCancelledMessagePayloadData" itemSubjectRef="template-regel-kommunicering-oul-cancelledType" />
+        <inputSet id="_56B3B8E5-D585-4BA6-9A60-D392B53A6984">
+          <dataInputRefs>_52293825-796A-4733-A436-96F4984FE15D</dataInputRefs>
+        </inputSet>
+        <outputSet id="_82EB3C3C-C8DE-4EDE-9754-4C80A4D22E21">
+          <dataOutputRefs>_E1015604-201A-4F55-9B71-D266A2138512</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation id="_08A4E863-6C83-4106-A9B6-D171DB2F6677">
+        <sourceRef>_5CC79038-3392-4F5A-A65D-DD237DD63B40</sourceRef>
+        <targetRef>_52293825-796A-4733-A436-96F4984FE15D</targetRef>
+      </dataInputAssociation>
+      <dataOutputAssociation id="_84FFD522-B11A-4E45-B489-2591396A71D9">
+        <sourceRef>_E1015604-201A-4F55-9B71-D266A2138512</sourceRef>
+        <targetRef>_9E0C1B2A-3D4F-4A5B-8C6D-7E8F9A0B1C2D</targetRef>
+      </dataOutputAssociation>
+    </serviceTask>
+    <intermediateThrowEvent id="_D7B3F9A4-6C2E-4F1B-8A07-3E9C5D1B2F48">
+      <incoming>_AA96CC92-9DF3-46E3-AEBA-436D338A6C7F</incoming>
+      <outgoing>_3238BF4B-3D7B-4268-9148-A9016BC2EA18</outgoing>
+      <dataInput id="_A16ABCCD-C669-4717-9154-F507BAAADBD1" name="cancelledMessage" drools:dtype="se.fk.rimfrost.framework.regel.oul.RegelOulCancelledMessagePayloadData" itemSubjectRef="template-regel-kommunicering-oul-cancelledType" />
+      <dataInputAssociation id="_0AC6B8D0-D5FA-4664-8130-61A7C654E72D">
+        <sourceRef>_9E0C1B2A-3D4F-4A5B-8C6D-7E8F9A0B1C2D</sourceRef>
+        <targetRef>_A16ABCCD-C669-4717-9154-F507BAAADBD1</targetRef>
+      </dataInputAssociation>
+      <inputSet id="_F1A92D6B-4E7C-4C3A-B8D2-6A5E0F9C1B74">
+        <dataInputRefs>_A16ABCCD-C669-4717-9154-F507BAAADBD1</dataInputRefs>
+      </inputSet>
+      <messageEventDefinition drools:msgref="template-regel-kommunicering-oul-cancelled" messageRef="_FC582BFE-7701-4390-970C-BAA836001141" />
+    </intermediateThrowEvent>
+    <scriptTask id="_C1548FAC-5AC7-4D8C-A2DD-28B68F768907" name="Create JA response" scriptFormat="http://www.java.com/java">
+      <incoming>_3238BF4B-3D7B-4268-9148-A9016BC2EA18</incoming>
+      <outgoing>_ADE5A3FF-384A-4F45-915E-2D20299DD263</outgoing>
+      <script>RegelResponseMessagePayloadData timeoutResponse = new RegelResponseMessagePayloadData();
+timeoutResponse.setHandlaggningId(handlaggningId);
+timeoutResponse.setUtfall(Utfall.JA);
+kcontext.setVariable(&quot;response&quot;, timeoutResponse);</script>
+    </scriptTask>
+    <sequenceFlow id="_60151426-5F6C-4434-A79A-05D248DBEA83" sourceRef="_379328FA-CA0D-4953-ADE7-E12791131023" targetRef="_0AAD7B9F-70B7-460C-B06A-F726CCC437F6" />
+    <sequenceFlow id="_C386F286-5E3F-46E3-96BC-D1D5FD43798A" sourceRef="_0AAD7B9F-70B7-460C-B06A-F726CCC437F6" targetRef="_2C54FDE1-83F8-44A4-9DD9-ACFCEA06337A" />
+    <sequenceFlow id="_8359D825-F55E-47C5-B671-C5CAD089FD92" sourceRef="_2C54FDE1-83F8-44A4-9DD9-ACFCEA06337A" targetRef="_DF57B457-E89E-452D-9762-0CF39684011F" />
+    <sequenceFlow id="_0D5CEB1D-8AE8-4CDE-939A-2488357709DF" sourceRef="_DF57B457-E89E-452D-9762-0CF39684011F" targetRef="_DC9CECAF-7092-4640-B341-D6348EAB0430" />
+    <sequenceFlow id="_A9311706-D93B-4C77-A0D0-4707D951460A" sourceRef="_DC9CECAF-7092-4640-B341-D6348EAB0430" targetRef="_9A6170A1-3C21-4354-BB35-39EB8CE08E77" />
+    <sequenceFlow id="_5C0B1EAB-A8B4-41F5-A179-761891A8A5CF" sourceRef="_9A6170A1-3C21-4354-BB35-39EB8CE08E77" targetRef="_2A2C304E-91FC-41D3-B610-8FD216A63360" />
+    <sequenceFlow id="_235A9A38-1674-4974-8C62-22A0F6061614" sourceRef="_9A6170A1-3C21-4354-BB35-39EB8CE08E77" targetRef="_6041FB48-A6F0-430F-963D-0C06B651A012" />
+    <sequenceFlow id="_FCB113E0-478B-419C-8259-B2DE449A09D6" sourceRef="_2A2C304E-91FC-41D3-B610-8FD216A63360" targetRef="_8E8CBD1C-B106-4422-B8A7-0A716F67C9BB" />
+    <sequenceFlow id="_0E2D9067-0349-4937-AEAE-4DB603BEE833" sourceRef="_8E8CBD1C-B106-4422-B8A7-0A716F67C9BB" targetRef="_1D1A8853-D324-4A16-A730-348C645DF0CF" />
+    <sequenceFlow id="_27ED3923-B22D-4866-BAF2-953A3D744352" sourceRef="_8E8CBD1C-B106-4422-B8A7-0A716F67C9BB" targetRef="_B20C9ECE-33F3-4B35-B4E1-4F66D5A29FBA" name="response == error">
+      <extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue>response == error</drools:metaValue>
+        </drools:metaData>
+      </extensionElements>
+      <conditionExpression xsi:type="tFormalExpression" id="_8D8FD8D1-B329-4A60-90FB-FED66B859AD5" language="http://www.java.com/java">return response.getError() != null;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_5FFDEEB7-C03B-43A0-8364-FF39965178F2" sourceRef="_1D1A8853-D324-4A16-A730-348C645DF0CF" targetRef="_E52B9A30-2B36-4488-80FB-3987F2FF895B" />
+    <sequenceFlow id="_540DE6EE-1535-465F-92EB-9A6995022691" sourceRef="_E52B9A30-2B36-4488-80FB-3987F2FF895B" targetRef="_F173EB12-5FA5-4182-A5BA-ECF0D963D17A" />
+    <sequenceFlow id="_BC1D7C8E-B47B-4B95-B888-1A3A553CCF4E" sourceRef="_B20C9ECE-33F3-4B35-B4E1-4F66D5A29FBA" targetRef="_84B5454A-5F17-4F25-A51E-D1973AF83CF3" />
+    <sequenceFlow id="_3ED4CAEF-D799-4545-86EE-8FB94F9C008B" sourceRef="_84B5454A-5F17-4F25-A51E-D1973AF83CF3" targetRef="_85F2B7FA-452B-4757-892D-EB9D96107E98" />
+    <sequenceFlow id="_66723176-CB23-4A28-85A0-1182051F9B5E" sourceRef="_85F2B7FA-452B-4757-892D-EB9D96107E98" targetRef="_3877E813-B711-4A87-B6CC-6C77F5F5FE5D" name="attempts == maxAttempts">
+      <extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue>attempts == maxAttempts</drools:metaValue>
+        </drools:metaData>
+      </extensionElements>
+      <conditionExpression xsi:type="tFormalExpression" id="_6790E6FE-3BB6-4D59-A317-90D3E3F425B5" language="http://www.java.com/java">return attempts == maxAttempts;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_F874ECF2-8F3B-4308-8FBC-4F670F91B8B9" sourceRef="_85F2B7FA-452B-4757-892D-EB9D96107E98" targetRef="_FA5C6DAF-21BF-4522-A2BB-11FB006FACBA" name="attempts &lt; maxAttempts">
+      <extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue>attempts &lt; maxAttempts</drools:metaValue>
+        </drools:metaData>
+      </extensionElements>
+      <conditionExpression xsi:type="tFormalExpression" id="_395C202A-EF76-46B0-8AC8-69E6C9D33A46" language="http://www.java.com/java">return attempts &lt; maxAttempts;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_234C626A-67CF-43B8-8304-C5DCB2B149D9" sourceRef="_FA5C6DAF-21BF-4522-A2BB-11FB006FACBA" targetRef="_DF57B457-E89E-452D-9762-0CF39684011F" />
+    <sequenceFlow id="_941A5E4C-2722-4873-B219-9411FAB3792F" sourceRef="_6041FB48-A6F0-430F-963D-0C06B651A012" targetRef="_AAE57DA3-255E-4F8C-8F0A-004E4A0B3EBC" />
+    <sequenceFlow id="_AA96CC92-9DF3-46E3-AEBA-436D338A6C7F" sourceRef="_AAE57DA3-255E-4F8C-8F0A-004E4A0B3EBC" targetRef="_D7B3F9A4-6C2E-4F1B-8A07-3E9C5D1B2F48" />
+    <sequenceFlow id="_3238BF4B-3D7B-4268-9148-A9016BC2EA18" sourceRef="_D7B3F9A4-6C2E-4F1B-8A07-3E9C5D1B2F48" targetRef="_C1548FAC-5AC7-4D8C-A2DD-28B68F768907" />
+    <sequenceFlow id="_ADE5A3FF-384A-4F45-915E-2D20299DD263" sourceRef="_C1548FAC-5AC7-4D8C-A2DD-28B68F768907" targetRef="_1D1A8853-D324-4A16-A730-348C645DF0CF" />
+  </process>
+  <bpmndi:BPMNDiagram id="_6C7A6E9B-9279-47CE-A867-7776AFDE07DA">
+    <bpmndi:BPMNPlane id="_642E4DB6-791A-44D3-A3FD-425E1F020064" bpmnElement="template_kommunicering_id">
+      <bpmndi:BPMNShape id="_85A0BC27-8A2A-4B8C-A5BB-B3012587DFA1" bpmnElement="_379328FA-CA0D-4953-ADE7-E12791131023">
+        <dc:Bounds x="-520" y="200" width="60" height="60" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="_2C1FFA15-D8B5-45E7-B7FA-F63507AE3ABE" bpmnElement="_0AAD7B9F-70B7-460C-B06A-F726CCC437F6">
+        <dc:Bounds x="-380" y="180" width="180" height="100" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="_62B5C764-DF87-47EE-9982-77DFB81DA030" bpmnElement="_2C54FDE1-83F8-44A4-9DD9-ACFCEA06337A">
+        <dc:Bounds x="-120" y="180" width="154" height="102" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="_B282B9A0-8488-4734-95EA-D87BD784E87B" bpmnElement="_DF57B457-E89E-452D-9762-0CF39684011F">
+        <dc:Bounds x="120" y="200" width="60" height="60" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="_EA9907B3-2127-453D-9CB5-732DE5A03193" bpmnElement="_DC9CECAF-7092-4640-B341-D6348EAB0430">
+        <dc:Bounds x="400" y="200" width="56" height="56" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="_38144D62-6B60-4BD0-84A6-37C8E787AF35" bpmnElement="_9A6170A1-3C21-4354-BB35-39EB8CE08E77">
+        <dc:Bounds x="600" y="200" width="60" height="60" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="_C651BC10-2FEB-427F-9940-9718856F5546" bpmnElement="_2A2C304E-91FC-41D3-B610-8FD216A63360">
+        <dc:Bounds x="780" y="200" width="56" height="56" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="_AAA7A31A-FF25-4028-AFF0-F6704615785E" bpmnElement="_8E8CBD1C-B106-4422-B8A7-0A716F67C9BB">
+        <dc:Bounds x="1020" y="200" width="60" height="60" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="_18038FD3-A9AF-4FA6-904E-BB2127B5F85A" bpmnElement="_1D1A8853-D324-4A16-A730-348C645DF0CF">
+        <dc:Bounds x="1160" y="200" width="60" height="60" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="_2F2D43E7-7F9E-46C5-BD67-5C1BDDCEE1EA" bpmnElement="_E52B9A30-2B36-4488-80FB-3987F2FF895B">
+        <dc:Bounds x="1300" y="180" width="154" height="102" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="_4B7AA1B8-529F-476F-9D46-25CDFE77D678" bpmnElement="_F173EB12-5FA5-4182-A5BA-ECF0D963D17A">
+        <dc:Bounds x="1540" y="200" width="56" height="56" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="_6D72AD8A-2692-4F65-8401-8FFDE3C45EA0" bpmnElement="_6041FB48-A6F0-430F-963D-0C06B651A012">
+        <dc:Bounds x="600" y="320" width="60" height="60" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="_FE9C14CE-5FC7-4F22-A7D0-2EE34E3C6C73" bpmnElement="_AAE57DA3-255E-4F8C-8F0A-004E4A0B3EBC">
+        <dc:Bounds x="540" y="440" width="180" height="100" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="_1C7F3E52-8B0D-4A4F-9E26-D3B8C0F5A172" bpmnElement="_D7B3F9A4-6C2E-4F1B-8A07-3E9C5D1B2F48">
+        <dc:Bounds x="602" y="600" width="56" height="56" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="_7AADB090-D18B-4783-B144-21CD83999ED8" bpmnElement="_C1548FAC-5AC7-4D8C-A2DD-28B68F768907">
+        <dc:Bounds x="540" y="720" width="180" height="100" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="_7F839092-2B13-4A11-A362-A9E8CCFBE3CA" bpmnElement="_B20C9ECE-33F3-4B35-B4E1-4F66D5A29FBA">
+        <dc:Bounds x="960" y="-640" width="180" height="100" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="_A2124D8D-12F8-4FBB-88BC-F8F0987675D5" bpmnElement="_84B5454A-5F17-4F25-A51E-D1973AF83CF3">
+        <dc:Bounds x="540" y="-640" width="180" height="100" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="_7B8CEE90-E1B3-4518-B4A9-65BC007694C6" bpmnElement="_85F2B7FA-452B-4757-892D-EB9D96107E98">
+        <dc:Bounds x="120" y="-620" width="60" height="60" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="_CAAD3955-AF4D-486E-9692-CF1E1D70F33F" bpmnElement="_3877E813-B711-4A87-B6CC-6C77F5F5FE5D">
+        <dc:Bounds x="120" y="-800" width="60" height="60" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="_2FB1F468-6F56-451B-A43D-30D3718C348F" bpmnElement="_FA5C6DAF-21BF-4522-A2BB-11FB006FACBA">
+        <dc:Bounds x="120" y="80" width="60" height="60" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="_087895D0-C9A7-4977-A373-B9E866FE8985" bpmnElement="_60151426-5F6C-4434-A79A-05D248DBEA83">
+        <di:waypoint x="-460" y="230" />
+        <di:waypoint x="-380" y="230" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="_353AD360-4DC5-4175-8489-84D39561DEE8" bpmnElement="_C386F286-5E3F-46E3-96BC-D1D5FD43798A">
+        <di:waypoint x="-200" y="230" />
+        <di:waypoint x="-120" y="231" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="_81032015-E73F-4E9C-9B6D-AA4AF1206F0A" bpmnElement="_8359D825-F55E-47C5-B671-C5CAD089FD92">
+        <di:waypoint x="34" y="231" />
+        <di:waypoint x="120" y="230" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="_2E25E9EA-FE13-4A7F-B89D-E5AC5B440CD9" bpmnElement="_0D5CEB1D-8AE8-4CDE-939A-2488357709DF">
+        <di:waypoint x="180" y="230" />
+        <di:waypoint x="400" y="228" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="_0B1F7FC7-79DF-4D7D-B7C1-595CC6F21C08" bpmnElement="_A9311706-D93B-4C77-A0D0-4707D951460A">
+        <di:waypoint x="456" y="228" />
+        <di:waypoint x="600" y="230" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="_6B6277DE-9852-4AD1-93A2-8FA74D7AF92B" bpmnElement="_5C0B1EAB-A8B4-41F5-A179-761891A8A5CF">
+        <di:waypoint x="660" y="230" />
+        <di:waypoint x="780" y="228" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="_9EAFCB87-6840-4BB3-AEB9-7FC0CF91D6A6" bpmnElement="_235A9A38-1674-4974-8C62-22A0F6061614">
+        <di:waypoint x="630" y="260" />
+        <di:waypoint x="630" y="320" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="_F6B9454E-D6C2-4A68-B963-914FFA40E4E3" bpmnElement="_FCB113E0-478B-419C-8259-B2DE449A09D6">
+        <di:waypoint x="836" y="228" />
+        <di:waypoint x="1020" y="230" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="_9954C14E-3633-4431-8C75-55A79DD0E77D" bpmnElement="_0E2D9067-0349-4937-AEAE-4DB603BEE833">
+        <di:waypoint x="1080" y="230" />
+        <di:waypoint x="1160" y="230" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="_D44B33A0-4994-4CB8-9D08-283CEDE6A756" bpmnElement="_27ED3923-B22D-4866-BAF2-953A3D744352">
+        <di:waypoint x="1050" y="200" />
+        <di:waypoint x="1050" y="-280" />
+        <di:waypoint x="1050" y="-540" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="_82B89DA0-93D0-4115-AC30-4AD93AAADFF0" bpmnElement="_5FFDEEB7-C03B-43A0-8364-FF39965178F2">
+        <di:waypoint x="1220" y="230" />
+        <di:waypoint x="1300" y="231" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="_E3658A60-ECAE-4E42-A74A-AF92E06EA6F7" bpmnElement="_540DE6EE-1535-465F-92EB-9A6995022691">
+        <di:waypoint x="1454" y="231" />
+        <di:waypoint x="1540" y="228" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="_8E65C3CF-4326-479B-B42A-9182570D86FC" bpmnElement="_BC1D7C8E-B47B-4B95-B888-1A3A553CCF4E">
+        <di:waypoint x="960" y="-590" />
+        <di:waypoint x="720" y="-590" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="_388DF860-DEA1-4B75-B1DE-3985E48D0FA0" bpmnElement="_3ED4CAEF-D799-4545-86EE-8FB94F9C008B">
+        <di:waypoint x="540" y="-590" />
+        <di:waypoint x="180" y="-590" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="_ACD9600A-0657-4C59-A031-1B27B6FBFF5F" bpmnElement="_66723176-CB23-4A28-85A0-1182051F9B5E">
+        <di:waypoint x="150" y="-620" />
+        <di:waypoint x="150" y="-740" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="_98A4A9BD-0BBA-429E-9497-4187A19FCDD6" bpmnElement="_F874ECF2-8F3B-4308-8FBC-4F670F91B8B9">
+        <di:waypoint x="150" y="-560" />
+        <di:waypoint x="150" y="80" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="_F91E41E7-9699-48C5-B707-AF8A5629C926" bpmnElement="_234C626A-67CF-43B8-8304-C5DCB2B149D9">
+        <di:waypoint x="150" y="140" />
+        <di:waypoint x="150" y="200" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="_663269F7-511D-442B-A670-3C4509555C16" bpmnElement="_941A5E4C-2722-4873-B219-9411FAB3792F">
+        <di:waypoint x="630" y="380" />
+        <di:waypoint x="630" y="440" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="_D374E18E-C2A4-4293-8AAF-717A204D3344" bpmnElement="_AA96CC92-9DF3-46E3-AEBA-436D338A6C7F">
+        <di:waypoint x="630" y="540" />
+        <di:waypoint x="630" y="600" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="_D1D200AB-40F0-4433-851D-0D50C44CBF5E" bpmnElement="_3238BF4B-3D7B-4268-9148-A9016BC2EA18">
+        <di:waypoint x="630" y="656" />
+        <di:waypoint x="630" y="720" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="_07AA91F2-6052-48AD-B3AB-545EA0524F3B" bpmnElement="_ADE5A3FF-384A-4F45-915E-2D20299DD263">
+        <di:waypoint x="720" y="770" />
+        <di:waypoint x="1190" y="770" />
+        <di:waypoint x="1190" y="260" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>
