@@ -2,6 +2,12 @@
 
 Changelog of rimfrost-template-regel-subprocess.
 
+## 1.1.7 (2026-11-12)
+
+### Bug Fixes
+
+-  incorrect topic ([1de52](https://github.com/Forsakringskassan/rimfrost-template-regel-subprocess/commit/1de524fcdc97e7a) Nils Elveros)  
+
 ## 1.1.6 (2026-11-12)
 
 ### Bug Fixes
