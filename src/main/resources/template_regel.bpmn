@@ -41,6 +41,7 @@
   <bpmn2:message id="_A8E5C3F1-2D7B-4A9E-B6C4-1F0E9D8C7B62" itemRef="regel-oul-cancelledType" name="regel-oul-cancelled" />
   <bpmn2:message id="_A52C4415-DC7C-4730-9EE7-070AD0D6E322" itemRef="Type" name="" />
   <bpmn2:message id="_9EADCF1E-9A76-4C24-BEB1-7DAC70220F27" itemRef="Type" name="" />
+  <bpmn2:message id="_D215ACAB-A023-4B6B-A942-5BA0A92C1CB6" itemRef="template-regel-oul-cancelledType" name="template-regel-oul-cancelled" />
   <bpmn2:interface id="_428739B8-C962-4EBE-A16B-6E2B5133D50B_ServiceInterface" name="se.fk.rimfrost.framework.process.RegelService" implementationRef="se.fk.rimfrost.framework.process.RegelService">
     <bpmn2:operation id="_428739B8-C962-4EBE-A16B-6E2B5133D50B_ServiceOperation" name="createRegelRequest" implementationRef="createRegelRequest">
       <bpmn2:inMessageRef>_428739B8-C962-4EBE-A16B-6E2B5133D50B_InMessage</bpmn2:inMessageRef>
@@ -336,7 +337,7 @@
       <bpmn2:inputSet id="_F1A92D6B-4E7C-4C3A-B8D2-6A5E0F9C1B74">
         <bpmn2:dataInputRefs>_D7B3F9A4-6C2E-4F1B-8A07-3E9C5D1B2F48_cancelledMessageInputX</bpmn2:dataInputRefs>
       </bpmn2:inputSet>
-      <bpmn2:messageEventDefinition drools:msgref="regel-oul-cancelled" messageRef="_A8E5C3F1-2D7B-4A9E-B6C4-1F0E9D8C7B62" />
+      <bpmn2:messageEventDefinition drools:msgref="template-regel-oul-cancelled" messageRef="_D215ACAB-A023-4B6B-A942-5BA0A92C1CB6" />
     </bpmn2:intermediateThrowEvent>
     <bpmn2:intermediateThrowEvent id="_E496A906-CCA2-4DAD-8E76-D5F0E5FDB341">
       <bpmn2:extensionElements>

@@ -26,6 +26,8 @@
   <message id="_A8E5C3F1-2D7B-4A9E-B6C4-1F0E9D8C7B62" itemRef="regel-oul-cancelledType" name="regel-oul-cancelled" />
   <message id="_1D040817-0BF0-42A8-BB0B-56A9BFB8F448" itemRef="Type" name="" />
   <message id="_15E1AEB5-0C2B-4331-9E82-2041128A69A2" itemRef="Type" name="" />
+  <message id="_CEC31C88-45C3-4921-A1D7-2663D4202A18" itemRef="regel-oul-komplettering-cancelledType" name="regel-oul-komplettering-cancelled" />
+  <message id="_E5F0F587-70FC-4E70-B268-891F198F951C" itemRef="template-regel-komplettering-oul-cancelledType" name="template-regel-komplettering-oul-cancelled" />
   <interface id="_10588BE8-72DC-44B0-810B-0A44875857CA" name="se.fk.rimfrost.framework.process.RegelService">
     <operation id="_9623EA6F-D8E8-4792-9AB7-006077AA74CC" name="init">
       <inMessageRef>_267C0DF6-F5C1-45A9-8ECE-4A16F0DB91FD</inMessageRef>
@@ -325,7 +327,7 @@
       <inputSet id="_F1A92D6B-4E7C-4C3A-B8D2-6A5E0F9C1B74">
         <dataInputRefs>_D7B3F9A4-6C2E-4F1B-8A07-3E9C5D1B2F48_cancelledMessageInputX</dataInputRefs>
       </inputSet>
-      <messageEventDefinition drools:msgref="regel-oul-cancelled" messageRef="_A8E5C3F1-2D7B-4A9E-B6C4-1F0E9D8C7B62" />
+      <messageEventDefinition drools:msgref="template-regel-komplettering-oul-cancelled" messageRef="_E5F0F587-70FC-4E70-B268-891F198F951C" />
     </intermediateThrowEvent>
     <intermediateThrowEvent id="_DC9CECAF-7092-4640-B341-D6348EAB0430">
       <extensionElements>
